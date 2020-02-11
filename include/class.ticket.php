@@ -1542,7 +1542,7 @@ implements RestrictedAccess, Threadable, Searchable {
 
         // Refer thread to previously assigned or closing agent
         if ($refer && $cfg->autoReferTicketsOnClose())
-            $this->thread->refer($refer);
+            $this->getThread()->refer($refer);
 
         // Log status change b4 reload — if currently has a status. (On new
         // ticket, the ticket is opened and thereafter the status is set to
